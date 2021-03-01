@@ -1,14 +1,14 @@
-// swift-tools-version:5.3
+// swift-tools-version:5.0
 
 import PackageDescription
 
 let package = Package(
     name: "URLEncodedFormKit",
     platforms: [
-        .iOS(.v9),
-        .tvOS(.v9),
-        .watchOS(.v2),
-        .macOS(.v10_10)
+        .iOS(.v10),
+        .tvOS(.v10),
+        .watchOS(.v3),
+        .macOS(.v10_12)
     ],
     products: [
         .library(
