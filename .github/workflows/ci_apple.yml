@@ -1,0 +1,40 @@
+name: Apple CI
+
+on:
+  push:
+    branches: [ master ]
+  pull_request:
+    branches: [ master ]
+    
+jobs:
+  spm:
+    runs-on: macOS-latest
+    steps:
+    - uses: actions/checkout@v2
+    - name: Run tests
+      run: swift test --enable-test-discovery
+
+  cocoapods:
+    runs-on: macOS-latest
+    steps:
+    - uses: actions/checkout@v2
+    - name: Lint Podspec
+      run: |
+        set -eo pipefail
+        pod lib lint --allow-warnings --use-libraries
+  carthage:
+    runs-on: macOS-latest
+    steps:
+    - uses: actions/checkout@v2
+    - name: Carthage build
+      run: ./Scripts/carthage.sh build --platform "ios,macos,tvos,watchos" --no-skip-current
+
+  carthage_xcframework:
+    runs-on: macOS-latest
+    steps:
+    - uses: actions/checkout@v2
+    - name: Carthage XCFramework build
+      run: |
+        brew update
+        brew upgrade carthage
+        carthage build --platform "ios,macos,tvos,watchos" --no-skip-current --use-xcframeworks

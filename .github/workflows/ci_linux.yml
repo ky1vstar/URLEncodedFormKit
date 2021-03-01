@@ -1,0 +1,18 @@
+name: Linux CI
+
+on:
+  push:
+    branches: [ master ]
+  pull_request:
+    branches: [ master ]
+    
+jobs:
+  spm:
+    runs-on: ubuntu-latest
+    
+    steps:
+    - name: Swift 5.3 Docker Container
+      uses: docker://swift:5.3-xenial
+    - uses: actions/checkout@v2
+    - name: Run tests
+      run: swift test --enable-test-discovery
