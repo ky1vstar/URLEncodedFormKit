@@ -26,7 +26,8 @@ let package = Package(
         .testTarget(
             name: "URLEncodedFormKitTests",
             dependencies: ["URLEncodedFormKit"],
-            path: "Tests"
+            path: "Tests",
+            exclude: ["LinuxMain.swift"]
         ),
     ]
 )
