@@ -77,7 +77,7 @@ public struct URLEncodedFormEncoder {
         guard var components = URLComponents(url: url, resolvingAgainstBaseURL: true) else {
             throw URLEncodedFormError.invalidURL(url: url)
         }
-        components.query = try self.encode(encodable)
+        components.percentEncodedQuery = try self.encode(encodable)
         guard let newURL = components.url else {
             throw URLEncodedFormError.invalidURL(url: url)
         }
