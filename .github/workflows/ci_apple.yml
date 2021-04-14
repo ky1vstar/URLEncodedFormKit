@@ -19,9 +19,8 @@ jobs:
     steps:
     - uses: actions/checkout@v2
     - name: Lint Podspec
-      run: |
-        set -eo pipefail
-        pod lib lint --allow-warnings --use-libraries
+      run: pod lib lint --allow-warnings --use-libraries
+        
   carthage:
     runs-on: macOS-latest
     steps:
@@ -35,3 +34,15 @@ jobs:
     - uses: actions/checkout@v2
     - name: Carthage XCFramework build
       run: carthage build --platform "ios,macos,tvos,watchos" --no-skip-current --use-xcframeworks
+
+  deploy_docs:
+    runs-on: macos-latest
+    needs: [spm, cocoapods, carthage, carthage_xcframework]
+    if: ${{ github.event_name == 'push' }}
+    steps:
+    - uses: actions/checkout@v2
+    - name: Publish Jazzy Docs
+      uses: steven0351/publish-jazzy-docs@v1
+      with:
+        personal_access_token: ${{ github.actor }}:${{ secrets.GITHUB_TOKEN }}
+        config: .jazzy.yml
