@@ -1,0 +1,350 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>URLEncodedFormDecoder Structure Reference</title>
+    <link rel="stylesheet" type="text/css" href="../css/jazzy.css" />
+    <link rel="stylesheet" type="text/css" href="../css/highlight.css" />
+    <meta charset="utf-8">
+    <script src="../js/jquery.min.js" defer></script>
+    <script src="../js/jazzy.js" defer></script>
+    
+    <script src="../js/lunr.min.js" defer></script>
+    <script src="../js/typeahead.jquery.js" defer></script>
+    <script src="../js/jazzy.search.js" defer></script>
+  </head>
+  <body>
+
+    <a name="//apple_ref/swift/Struct/URLEncodedFormDecoder" class="dashAnchor"></a>
+
+    <a title="URLEncodedFormDecoder Structure Reference"></a>
+
+    <header class="header">
+      <p class="header-col header-col--primary">
+        <a class="header-link" href="../index.html">
+          URLEncodedFormKit 1.0.0 Docs
+        </a>
+         (97% documented)
+      </p>
+    
+      <p class="header-col--secondary">
+        <form role="search" action="../search.json">
+          <input type="text" placeholder="Search documentation" data-typeahead>
+        </form>
+      </p>
+    
+        <p class="header-col header-col--secondary">
+          <a class="header-link" href="https://github.com/ky1vstar/URLEncodedFormKit">
+            <img class="header-icon" src="../img/gh.png"/>
+            View on GitHub
+          </a>
+        </p>
+    
+    </header>
+
+    <p class="breadcrumbs">
+      <a class="breadcrumb" href="../index.html">URLEncodedFormKit Reference</a>
+      <img class="carat" src="../img/carat.png" />
+      URLEncodedFormDecoder Structure Reference
+    </p>
+
+    <div class="content-wrapper">
+      <nav class="navigation">
+        <ul class="nav-groups">
+          <li class="nav-group-name">
+            <a class="nav-group-name-link" href="../Structs.html">Structures</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Structs/URLEncodedFormDecoder.html">URLEncodedFormDecoder</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Structs/URLEncodedFormDecoder/Configuration.html">– Configuration</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Structs/URLEncodedFormEncoder.html">URLEncodedFormEncoder</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Structs/URLEncodedFormEncoder/Configuration.html">– Configuration</a>
+              </li>
+            </ul>
+          </li>
+        </ul>
+      </nav>
+      <article class="main-content">
+
+        <section class="section">
+          <div class="section-content top-matter">
+            <h1>URLEncodedFormDecoder</h1>
+              <div class="declaration">
+                <div class="language">
+                  
+                  <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">struct</span> <span class="kt">URLEncodedFormDecoder</span></code></pre>
+
+                </div>
+              </div>
+            <p>Decodes instances of <code>Decodable</code> types from <code>application/x-www-form-urlencoded</code> <code>Data</code>.</p>
+<pre class="highlight swift"><code><span class="nf">print</span><span class="p">(</span><span class="n">data</span><span class="p">)</span> <span class="c1">// "name=Vapor&amp;age=3"</span>
+<span class="k">let</span> <span class="nv">user</span> <span class="o">=</span> <span class="k">try</span> <span class="kt">URLEncodedFormDecoder</span><span class="p">()</span><span class="o">.</span><span class="nf">decode</span><span class="p">(</span><span class="kt">User</span><span class="o">.</span><span class="k">self</span><span class="p">,</span> <span class="nv">from</span><span class="p">:</span> <span class="n">data</span><span class="p">)</span>
+<span class="nf">print</span><span class="p">(</span><span class="n">user</span><span class="p">)</span> <span class="c1">// User</span>
+</code></pre>
+
+<p>URL-encoded forms are commonly used by websites to send form data via POST requests. This encoding is relatively
+efficient for small amounts of data but must be percent-encoded.  <code>multipart/form-data</code> is more efficient for sending
+large data blobs like files.</p>
+
+<p>See <a href="https://developer.mozilla.org/en-US/docs/Web/HTTP/Methods/POST">Mozilla&rsquo;s</a> docs for more information about
+url-encoded forms.</p>
+
+          </div>
+        </section>
+
+        <section class="section">
+          <div class="section-content">
+            <div class="task-group">
+              <ul class="item-container">
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:17URLEncodedFormKit0aB7DecoderV13ConfigurationV"></a>
+                    <a name="//apple_ref/swift/Struct/Configuration" class="dashAnchor"></a>
+                    <a class="token" href="#/s:17URLEncodedFormKit0aB7DecoderV13ConfigurationV">Configuration</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Used to capture URLForm Coding Configuration used for decoding</p>
+
+                        <a href="../Structs/URLEncodedFormDecoder/Configuration.html" class="slightly-smaller">See more</a>
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">struct</span> <span class="kt">Configuration</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:17URLEncodedFormKit0aB7DecoderV13configurationA2C13ConfigurationV_tcfc"></a>
+                    <a name="//apple_ref/swift/Method/init(configuration:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:17URLEncodedFormKit0aB7DecoderV13configurationA2C13ConfigurationV_tcfc">init(configuration:<wbr>)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Create a new <code>URLEncodedFormDecoder</code>. Can be configured by using the global <code>ContentConfiguration</code> class</p>
+<pre class="highlight swift"><code><span class="kt">ContentConfiguration</span><span class="o">.</span><span class="n">global</span><span class="o">.</span><span class="nf">use</span><span class="p">(</span><span class="nv">urlDecoder</span><span class="p">:</span> <span class="kt">URLEncodedFormDecoder</span><span class="p">(</span><span class="nv">bracketsAsArray</span><span class="p">:</span> <span class="kc">true</span><span class="p">,</span> <span class="nv">flagsAsBool</span><span class="p">:</span> <span class="kc">true</span><span class="p">,</span> <span class="nv">arraySeparator</span><span class="p">:</span> <span class="kc">nil</span><span class="p">))</span>
+</code></pre>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="nf">init</span><span class="p">(</span>
+    <span class="nv">configuration</span><span class="p">:</span> <span class="kt"><a href="../Structs/URLEncodedFormDecoder/Configuration.html">Configuration</a></span> <span class="o">=</span> <span class="o">.</span><span class="nf">init</span><span class="p">()</span>
+<span class="p">)</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div>
+                        <h4>Parameters</h4>
+                        <table class="graybox">
+                          <tbody>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>configuration</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>Defines how decoding is done see <code>URLEncodedFormCodingConfig</code> for more information</p>
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:17URLEncodedFormKit0aB7DecoderV6decode_4fromxxm_10Foundation3URLVtKSeRzlF"></a>
+                    <a name="//apple_ref/swift/Method/decode(_:from:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:17URLEncodedFormKit0aB7DecoderV6decode_4fromxxm_10Foundation3URLVtKSeRzlF">decode(_:<wbr>from:<wbr>)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Decodes the URL&rsquo;s query string to the type provided</p>
+<pre class="highlight swift"><code><span class="k">let</span> <span class="nv">ziz</span> <span class="o">=</span> <span class="k">try</span> <span class="kt">URLEncodedFormDecoder</span><span class="p">()</span><span class="o">.</span><span class="nf">decode</span><span class="p">(</span><span class="kt">Pet</span><span class="o">.</span><span class="k">self</span><span class="p">,</span> <span class="nv">from</span><span class="p">:</span> <span class="s">"name=Ziz&amp;type=cat"</span><span class="p">)</span>
+</code></pre>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">func</span> <span class="n">decode</span><span class="o">&lt;</span><span class="kt">D</span><span class="o">&gt;</span><span class="p">(</span><span class="n">_</span> <span class="nv">decodable</span><span class="p">:</span> <span class="kt">D</span><span class="o">.</span><span class="k">Type</span><span class="p">,</span> <span class="n">from</span> <span class="nv">url</span><span class="p">:</span> <span class="kt">URL</span><span class="p">)</span> <span class="k">throws</span> <span class="o">-&gt;</span> <span class="kt">D</span> <span class="k">where</span> <span class="kt">D</span> <span class="p">:</span> <span class="kt">Decodable</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div>
+                        <h4>Parameters</h4>
+                        <table class="graybox">
+                          <tbody>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>decodable</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>Type to decode to</p>
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>url</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>URL to read the query string from</p>
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>configuration</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>Overwrides the default coding configuration</p>
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:17URLEncodedFormKit0aB7DecoderV6decode_4fromxxm_SStKSeRzlF"></a>
+                    <a name="//apple_ref/swift/Method/decode(_:from:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:17URLEncodedFormKit0aB7DecoderV6decode_4fromxxm_SStKSeRzlF">decode(_:<wbr>from:<wbr>)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Decodes an instance of the supplied <code>Decodable</code> type from <code>Data</code>.</p>
+<pre class="highlight swift"><code><span class="nf">print</span><span class="p">(</span><span class="n">data</span><span class="p">)</span> <span class="c1">// "name=Vapor&amp;age=3"</span>
+<span class="k">let</span> <span class="nv">user</span> <span class="o">=</span> <span class="k">try</span> <span class="kt">URLEncodedFormDecoder</span><span class="p">()</span><span class="o">.</span><span class="nf">decode</span><span class="p">(</span><span class="kt">User</span><span class="o">.</span><span class="k">self</span><span class="p">,</span> <span class="nv">from</span><span class="p">:</span> <span class="n">data</span><span class="p">)</span>
+<span class="nf">print</span><span class="p">(</span><span class="n">user</span><span class="p">)</span> <span class="c1">// User</span>
+</code></pre>
+<div class="aside aside-throws">
+    <p class="aside-title">Throws</p>
+    Any error that may occur while attempting to decode the specified type.
+
+</div>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">func</span> <span class="n">decode</span><span class="o">&lt;</span><span class="kt">D</span><span class="o">&gt;</span><span class="p">(</span><span class="n">_</span> <span class="nv">decodable</span><span class="p">:</span> <span class="kt">D</span><span class="o">.</span><span class="k">Type</span><span class="p">,</span> <span class="n">from</span> <span class="nv">string</span><span class="p">:</span> <span class="kt">String</span><span class="p">)</span> <span class="k">throws</span> <span class="o">-&gt;</span> <span class="kt">D</span> <span class="k">where</span> <span class="kt">D</span> <span class="p">:</span> <span class="kt">Decodable</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div>
+                        <h4>Parameters</h4>
+                        <table class="graybox">
+                          <tbody>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>decodable</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>Generic <code>Decodable</code> type (<code>D</code>) to decode.</p>
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>from</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p><code>Data</code> to decode a <code>D</code> from.</p>
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>configuration</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>Overwrides the default coding configuration</p>
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                      <div>
+                        <h4>Return Value</h4>
+                        <p>An instance of the <code>Decodable</code> type (<code>D</code>).</p>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </section>
+
+      </article>
+    </div>
+    <section class="footer">
+      <p>&copy; 2021 <a class="link" href="https://vapor.codes/" target="_blank" rel="external">Vapor (redistributed by ky1vstar)</a>. All rights reserved. (Last updated: 2021-04-19)</p>
+      <p>Generated by <a class="link" href="https://github.com/realm/jazzy" target="_blank" rel="external">jazzy ♪♫ v0.13.6</a>, a <a class="link" href="https://realm.io" target="_blank" rel="external">Realm</a> project.</p>
+    </section>
+  </body>
+</div>
+</html>
