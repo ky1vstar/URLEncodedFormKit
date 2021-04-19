@@ -9,7 +9,7 @@
 [![Linux CI](https://github.com/ky1vstar/URLEncodedFormKit/actions/workflows/ci_linux.yml/badge.svg?event=push)](https://github.com/ky1vstar/URLEncodedFormKit/actions/workflows/ci_linux.yml)
 [![Windows CI](https://github.com/ky1vstar/URLEncodedFormKit/actions/workflows/ci_windows.yml/badge.svg?event=push)](https://github.com/ky1vstar/URLEncodedFormKit/actions/workflows/ci_windows.yml)
 
-This library includes both encoder and decoder for `application/x-www-form-urlencoded` data. Source codes are owned by [Vapor](https://github.com/vapor/vapor/tree/master/Sources/Vapor/URLEncodedForm). I just decided to redistribute it as separate library and provide package managers and CI support.
+This library includes both encoder and decoder for `application/x-www-form-urlencoded` data. Source codes are owned by [Vapor](https://github.com/vapor/vapor/tree/main/Sources/Vapor/URLEncodedForm). I just decided to redistribute it as separate library and provide package managers and CI support.
 
 ## Installation
 
@@ -54,4 +54,4 @@ If you prefer not to use any of the aforementioned dependency managers, you can 
 
 ## License
 
-[Vapor's project MIT License](https://github.com/vapor/vapor/blob/master/LICENSE)
+[Vapor's project MIT License](https://github.com/vapor/vapor/blob/main/LICENSE)
